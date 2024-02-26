@@ -1,5 +1,5 @@
-import { type ClassValue, clsx } from "clsx"
-import { twMerge } from "tailwind-merge"
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 /**
  * Combines class names using clsx and merges them according to Tailwind CSS precedence rules.
@@ -15,5 +15,5 @@ import { twMerge } from "tailwind-merge"
  * // Returns: 'p-4 text-center bg-red-500 hover:bg-blue-500 active:bg-green-500' (assuming isError is true)
  */
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+  return twMerge(clsx(inputs));
 }
