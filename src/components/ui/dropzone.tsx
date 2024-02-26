@@ -1,21 +1,15 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/styles";
 import { forwardRef } from "react";
 
-export interface DropzoneProps extends React.InputHTMLAttributes<HTMLInputElement> { }
+export interface DropzoneProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {}
 
-const Dropzone = forwardRef<HTMLInputElement, DropzoneProps>(({ className, ...props }, ref) => {
-  return (
-    <input
-      type="file"
-      className={cn(
-        className
-      )}
-      ref={ref}
-      {...props}
-    />
-  )
-})
+const Dropzone = forwardRef<HTMLInputElement, DropzoneProps>(
+  ({ className, ...props }, ref) => {
+    return <input type="file" className={cn(className)} ref={ref} {...props} />;
+  },
+);
 
-Dropzone.displayName = "Dropzone"
+Dropzone.displayName = "Dropzone";
 
-export { Dropzone }
+export { Dropzone };
